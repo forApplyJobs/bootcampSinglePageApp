@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-
+import { NavbarToggleService } from '../navbar-toggle.service';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  appTitleVersion = "asdasd"
-  authorName = "asdasd"
-
+  constructor(private navbarToggleService: NavbarToggleService) {}
+  
+  toggleNavbar() {
+    this.navbarToggleService.toggleNavbar();
+  }
+  
 }

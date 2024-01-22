@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
+import { NavbarToggleService } from '../navbar-toggle.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-info',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './info.component.html',
-  styleUrl: './info.component.css'
+  styleUrls: ['./info.component.css'],
 })
-export class InfoComponent {
+export class InfoComponent{
+  isNavbarCollapsed: boolean = true;
 
+  constructor(private navbarToggleService: NavbarToggleService) {}
+
+  ngOnInit() {
+    this.navbarToggleService.isNavbarCollapsed$.subscribe((collapsed) => {
+      this.isNavbarCollapsed = collapsed;
+      console.log(this.isNavbarCollapsed)
+    });
+  }
 }

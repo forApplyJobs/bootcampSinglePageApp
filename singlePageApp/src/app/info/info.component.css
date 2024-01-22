@@ -1,34 +1,109 @@
-.box {
-  text-align: center;
-  vertical-align: middle;
+
+.bgimage {
+    height:50vh;
+    background: url(/assets/asel.jpg);
+    background-position: center center;
+    background-size:cover;
+    position:relative;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    
 }
-.box a {
-  display: inline-block;
-  vertical-align: text-bottom;
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+  .info-bg{
+    background-color: #6ba5ec;
+  }
+  .navbar-expanded{
+    top:80%;
+  }
+  
+  .bg-text-active {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+  #about {
+    height: 100%;
+    min-height: 100vh;
+    font-size: 1.4rem;
+    position: relative;
+    background: #fafafa;
+    clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+    z-index: 5;
+    background: #fafafa
+      url(https://live.staticflickr.com/6232/6269913765_5860cb17d1_b.jpg)
+      center right no-repeat;
+    background-attachment: fixed;
+    
+  }
+  
+  #about .divider {
+    width: 40px; /* Çizgi uzunluğu */
+    height: 2px; /* Çizgi kalınlığı */
+    background-color: var(--yellow); /* Çizgi rengi */
+    margin: 10px auto; /* Çizgiyi dikey hizalamak için */
 }
-.box a:hover i {
-  background: #fdd835;
-  border-radius: 5px;
-  transform: rotate(45deg) scale(0.8);
-}
-.box a:hover i::before {
-  transform: rotate(-45deg) scale(1.5);
-}
-.box i {
-  display: inline-block;
-  font-size: 30px;
-  background: #ffb300;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  line-height: 60px;
-  color: #283593;
-  margin: 0 10px 10px 10px;
-  transition-duration: 0.3s;
-}
-.box i::before {
-  transition-duration: 0.3s;
-}
-.box i.fa::before {
-  display: block;
-}
+  #about .wrapper {
+    text-align: center;
+    padding: 15rem 10rem 12rem;
+    height: 100%;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  #about article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  @media only screen and (max-width: 1149px) {
+    #about article {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+    #about .desc.full {
+      grid-column-end: -1;
+    }
+  
+    #about .desc {
+      grid-column-end: -1;
+    }
+  }
+  @media only screen and (max-width: 949px) {
+    #about {
+      clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
+      background-position: top left;
+      background-size: cover;
+    }
+  }
+  @media only screen and (max-width: 649px) {
+    #about .wrapper {
+      padding: 10rem 2rem 8rem;
+    }
+  }

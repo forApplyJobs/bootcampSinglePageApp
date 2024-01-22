@@ -24,3 +24,10 @@ body {
 .nav-link:hover{
   color:bisque;
 }
+text{
+  color: var(--white);
+}
+.navbar{
+  background-color: var(--dark);
+  opacity: 90%;
+}

@@ -4,9 +4,14 @@
 
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import '@fortawesome/fontawesome-free/css/all.css';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+:root {
+  --dark: #2B303A;
+  --gray: #7C7C7C;
+  --blue:#92DCE5;
+  --white:#EEE5E9;
+  --yellow:#EDAE49;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
