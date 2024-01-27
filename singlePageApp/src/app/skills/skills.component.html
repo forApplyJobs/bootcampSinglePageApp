@@ -1,1 +1,34 @@
-<p>skills works!</p>
+
+<div class="skills-bg ">
+    <div id="site">
+
+        <input [ngModel]="userInput" (ngModelChange)="userInput = $event">
+        <div
+            [@openClose]="{value: isOpen ? 'open' : 'closed', params: {width:'100%' }}"
+            class="open-close-container">
+            <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+        </div>
+        <div class="skills_section">
+            <div class="skills_head">
+                <h2>My <span>Skills</span></h2>
+                <p>Here are my skills to represent my Expertise</p>
+            </div>
+
+            <div class="skills_main">
+                <div *ngFor="let skill of skills| searchPipe: userInput"
+                    class="skill_bar">
+
+                    <div class="info">
+                        <p>{{ skill.name }}</p>
+                        <p>{{ skill.percentage }}%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="{{ skill.name.toLowerCase() }}"
+                            [@openClose]="{value: isOpen ? 'open' : 'closed', params: {width:skill.percentage+'%'}}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

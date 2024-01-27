@@ -1,1 +1,19 @@
-<p>education works!</p>
+
+<div class="bg-info ">
+    <div id="site">
+        <div class="wrapper">
+            <div class="timeline">
+                <div class="timeline-card timeline-card-primary card shadow-sm"
+                    *ngFor="let education of educationData">
+                    <div class="card-body">
+                        <div class="h5 mb-1">{{ education.title }} <span
+                                class="text-muted h6">{{ education.subTitle
+                                }}</span></div>
+                        <div class="text-muted text-small mb-2">{{
+                            education.dateRange }}</div>
+                        <div>{{ education.description }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
