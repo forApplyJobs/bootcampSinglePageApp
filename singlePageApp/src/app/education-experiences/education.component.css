@@ -55,4 +55,12 @@
   
   .timeline-card-success:after {
     background-color: #37BC9B; }
-  
+  /* Hover efekti için bu CSS kodunu ekleyin */
+.timeline-card:hover {
+  transform: scale(1.1); /* İhtiyaca göre ölçü faktörünü ayarlayın */
+  transition: transform 0.3s ease; /* Yumuşak bir geçiş efekti ekleyin */
+}
+h1{
+  font-family: 'Arvo', sans-serif;
+  color:#4A89DC;
+}

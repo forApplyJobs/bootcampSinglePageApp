@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { InfoComponent } from "../info/info.component";
 import { FooterComponent } from "../footer/footer.component";
-import { EducationComponent } from "../education/education.component";
+import { EducationComponent } from "../education-experiences/education.component";
 import { SkillsComponent } from "../skills/skills.component";
 import { ProjectsComponent } from "../projects/projects.component";
 import { ExperiencesComponent } from "../experiences/experiences.component";

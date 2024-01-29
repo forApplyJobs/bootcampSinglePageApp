@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
 import { InfoComponent } from './info/info.component';
-import { EducationComponent } from './education/education.component';
+import { EducationComponent } from './education-experiences/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { SocialProjectsComponent } from './social-projects/social-projects.component';
 import { AwardsCertificatesComponent } from './awards-certificates/awards-certificates.component';
+import { ContainerComponent } from './container/container.component';
 
 export const routes: Routes = [
     { path: 'info', component: InfoComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'experiences', component: ExperiencesComponent },
     { path: 'social-projects', component: SocialProjectsComponent },
     { path: 'awards-certificates', component: AwardsCertificatesComponent },
+    { path: '', component: ContainerComponent },
     // Diğer route'lar buraya eklenir
   ];

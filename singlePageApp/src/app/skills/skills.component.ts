@@ -37,14 +37,21 @@ valueChange($event: any) {
   console.log(event)
 }
   skills = [
-    { name: 'HTML', percentage: 90 },
-    { name: 'CSS', percentage: 85 },
-    { name: 'SASS', percentage: 80 },
-    { name: 'JavaScript', percentage: 80 },
-    { name: 'React', percentage: 75 },
-    { name: 'Node', percentage: 70 },
-    { name: 'Express', percentage: 65 },
-    { name: 'MongoDB', percentage: 60 }
+    { name: 'HTML',icon:"fa-html5", percentage: 90 },
+    { name: 'CSS',icon:"fa-html5", percentage: 85 },
+    { name: 'SASS',icon:"fa-html5", percentage: 80 },
+    { name: 'JavaScript',icon:"fa-html5", percentage: 80 },
+    { name: 'React',icon:"fa-html5", percentage: 75 },
+    { name: 'Node',icon:"fa-html5", percentage: 70 },
+    { name: 'Express',icon:"fa-html5", percentage: 65 },
+    { name: 'MongoDB', icon:"fa-html5",percentage: 60 },{ name: 'HTML',icon:"fa-html5", percentage: 90 },
+    { name: 'CSS',icon:"fa-html5", percentage: 85 },
+    { name: 'SASS',icon:"fa-html5", percentage: 80 },
+    { name: 'JavaScript',icon:"fa-html5", percentage: 80 },
+    { name: 'React',icon:"fa-html5", percentage: 75 },
+    { name: 'Node',icon:"fa-html5", percentage: 70 },
+    { name: 'Express',icon:"fa-html5", percentage: 65 },
+    { name: 'MongoDB', icon:"fa-html5",percentage: 60 },
   ];
   isOpen = true;
   var :string="100%"

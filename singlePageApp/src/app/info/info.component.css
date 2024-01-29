@@ -26,6 +26,7 @@
   }
   .info-bg{
     background-color: #6ba5ec;
+    text-align: center;
   }
   .navbar-expanded{
     top:80%;
@@ -53,4 +54,19 @@
     grid-gap: 1rem;
     padding: 3rem 0;
     text-align: center;
+  }
+
+  @-webkit-keyframes typing { from { width: 0; } }
+  @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+  
+  .devText { 
+    font: bold 300% Consolas, Monaco, monospace;
+    border-right: .1em solid black;
+    width: 16.5em; 
+    width: 55ch;
+    margin: 2em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 7s steps(21, end),
+               blink-caret .5s step-end infinite alternate;
   }

@@ -1,1 +1,23 @@
-<p>social-projects works!</p>
+
+
+<div class="bg-info">
+    <div id="site">
+
+        <div class="wrapper">
+            <h1 class="text-center ">Social Projects</h1>
+            <div
+                *ngFor="let project of sProjects">
+
+                <figure>
+                    <img src={{project.imgpath}} alt="Portfolio Item">
+                    <figcaption>
+                        <h3>{{project.name}}</h3>
+                        <p>Description.</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </div>
+    </div>
+</div>

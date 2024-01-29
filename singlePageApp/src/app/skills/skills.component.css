@@ -1,4 +1,15 @@
 /* İstenilen stil eklemeleri burada yapılabilir */
+#site{
+  font-size: 1rem;
+}
+.transparent-bg{
+  background-color: #e4eaeb;
+  opacity: 80%;
+}
+.skills_section{
+  padding-bottom: 10rem;
+}
+
 .skills_main {
     width: 100%;
     display: grid;
@@ -31,12 +42,77 @@
     width: 50%;
     height: 100%;
     position: absolute;
-    background-color: #e74d06;
+    background-color: #E35865;
     border-radius: 25px;
   }
   .invisible {
     visibility: hidden;
   }
   .skills-bg {
-    background-color: var(--blue);
+    background-color: #E35865
   }
+input[type="text"], select{ 
+  outline: none;
+}body{
+  background: #eee;
+  letter-spacing: 2px;
+  min-height: 101vh;
+}
+
+input[type="text"], select{ 
+    outline: none;
+}
+
+
+
+h1{
+  font-family: 'Arvo', sans-serif;
+  color:#E35865;
+}
+
+input{
+  padding:0;
+  border-radius: 0;
+  border: none;
+  font-size: 20px;
+  color: #bbb;
+  background:none;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  font-family: 'Arvo', sans-serif;
+  padding: 0;
+  line-height: 25px;
+}
+
+#searchBox{
+  padding-top: 10rem;
+}
+.form{
+  padding: 10px 0;
+  padding-right: 15px;
+  border: 3px solid #E35865;
+  
+}
+.form.col-xs-12{
+  padding-left: 0;
+}
+.glyphicon{
+  color: #E35865;
+  font-size: 20px;
+  line-height: 25px;
+}
+.glyphicon-search{
+  cursor: pointer;
+
+}
+/*********media query starts ***********/
+
+@media screen and (max-width: 420px){
+  #searchBar,.glyphicon{
+    font-size: 16px;
+  } 
+  
+  h1{
+    font-size: 28px;
+  } 
+}
