@@ -1,13 +1,15 @@
 .box {
     text-align: center;
     vertical-align: middle;
+    background-color: var(--dark);
+    padding: 0.5rem;
   }
   .box a {
     display: inline-block;
     vertical-align: text-bottom;
   }
   .box a:hover i {
-    background: #fdd835;
+    background: #faecae;
     border-radius: 5px;
     transform: rotate(45deg) scale(0.8);
   }
@@ -17,12 +19,12 @@
   .box i {
     display: inline-block;
     font-size: 30px;
-    background: #ffb300;
+    background: #faecae;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     line-height: 60px;
-    color: #283593;
+    color: hwb(0 0% 100%);
     margin: 0 10px 10px 10px;
     transition-duration: 0.3s;
   }

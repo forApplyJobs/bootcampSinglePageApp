@@ -1,9 +1,9 @@
 
 figure {
     float: left;
-    height: 6em;
+    height: 8em;
     margin: 1rem;
-    width: 12em;
+    width: 16em;
     -webkit-transform: perspective(500);
     -webkit-transform-style: preserve-3d;
     -webkit-transition: .5s;
@@ -39,5 +39,5 @@ h3 {
 
 h1{
     font-family: 'Arvo', sans-serif;
-    color:#E35865;
+    color:#0a0505;
   }
