@@ -11,9 +11,9 @@ import { Component } from '@angular/core';
 export class SocialProjectsComponent {
 
 sProjects = [
-  { name: 'Wings For Life',imgpath:"https://w7.pngwing.com/pngs/264/506/png-transparent-2017-wings-for-life-world-run-wings-for-life-world-run-2018-red-bull-red-bull-blue-text-public-relations.png"},
-  { name: 'IEEE', imgpath: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png"},
-  { name: 'Kızılay', imgpath: "https://logowik.com/content/uploads/images/turk-kizilay-yeni6291.jpg" },
+  { name: 'Wings For Life',role:"Staff",imgpath:"https://seeklogo.com/images/W/wings-for-life-logo-CDA5486708-seeklogo.com.png"},
+  { name: 'IEEE',role:"Üye", imgpath: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png"},
+  { name: 'Kızılay',role:"Gönüllü", imgpath: "https://seeklogo.com/images/K/kizilay-logo-8396A6F867-seeklogo.com.png" },
 
 ];
 }

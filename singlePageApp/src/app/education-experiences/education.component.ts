@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Education } from './education.model';
 import { CommonModule } from '@angular/common';
+import { DataService } from '../data.service';
 
 
 @Component({
@@ -11,9 +12,23 @@ import { CommonModule } from '@angular/common';
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
-  educationData: Education[] = [
-    new Education('Backend Developer', 'at Creative Agency', 'May, 2015 - Present', 'Leverage agile frameworks...'),
-    new Education('Graphic Designer', 'at Design Studio', 'June, 2013 - May, 2015', 'Override the digital divide...'),
-    new Education('Junior Web Developer', 'at Indie Studio', 'Jan, 2011 - May, 2013', 'User generated content in real-time...'),
-  ];
+  educationData: Education[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.loadEducationData();
+  }
+
+  loadEducationData() {
+    this.dataService.getEducationData().subscribe(
+      (response) => {
+        // response içindeki veriyi educationData dizisine atayın
+        this.educationData = response.message.map((item: { title: string; subTitle: string; dateRange: string; description: string; }) => new Education(item.title, item.subTitle, item.dateRange, item.description));
+      },
+      (error) => {
+        console.error('Education data load error:', error);
+      }
+    );
+  }
 }

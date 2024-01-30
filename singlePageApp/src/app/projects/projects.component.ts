@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from "../search-pipe.pipe";
+import { DataService } from '../data.service';
 
 @Component({
     selector: 'app-projects',
@@ -12,15 +13,24 @@ import { SearchPipe } from "../search-pipe.pipe";
 })
 export class ProjectsComponent {
 userInput: any;
-skills = [
-  { name: 'HTML', percentage: 90 },
-  { name: 'CSS', percentage: 85 },
-  { name: 'SASS', percentage: 80 },
-  { name: 'JavaScript', percentage: 80 },
-  { name: 'React', percentage: 75 },
-  { name: 'Node', percentage: 70 },
-  { name: 'Express', percentage: 65 },
-  { name: 'MongoDB', percentage: 60 }
-];
+projects: any[] = [];
+
+constructor(private dataService: DataService) {}
+
+ngOnInit(): void {
+  this.loadProjectsData();
+}
+
+loadProjectsData() {
+  this.dataService.getProjectData().subscribe(
+    (response) => {
+      // API'den gelen veriyi projects dizisine atayın
+      this.projects = response.message;
+    },
+    (error) => {
+      console.error('Projects data load error:', error);
+    }
+  );
+}
 
 }
